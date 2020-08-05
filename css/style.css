@@ -1,0 +1,53 @@
+.bg-frutas{
+	background-image: url("../img/bg_frutas.png");
+	background-size: cover;
+}
+
+.bg-desenho{
+	background-image: url("../img/bg_desenho.png");
+	background-size: cover;
+}
+
+.nav-icon{
+	width:4em
+}
+
+form{
+	padding: 1.5rem;
+	border-width: .2rem;
+	border: solid;
+}
+
+.br-0{
+	border-radius: 0 !important;
+}
+.br-1{
+	border-radius: 1em !important;
+}
+.br-2{
+	border-radius: 2em !important;
+}
+.br-3{
+	border-radius: 3em !important;
+}
+.br-4{
+	border-radius: 4em !important;
+}
+.br-5{
+	border-radius: 5em !important;
+}
+.br-6{
+	border-radius: 6em !important;
+}
+.br-7{
+	border-radius: 7em !important;
+}
+.br-8{
+	border-radius: 8em !important;
+}
+.br-9{
+	border-radius: 9em !important;
+}
+.br-10{
+	border-radius: 10em !important;
+}

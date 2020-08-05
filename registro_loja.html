@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- meta  -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- inserindo bootstrap -->
+	<link rel="stylesheet" type="text/css" href="bootstrap_4.5.0/css/bootstrap.min.css">
+
+	<title>Hortifood App - Faça compras em casa</title>
+	<!-- icone do HortiFood -->
+	<link rel="shortcut icon" href="img/icon_logo_reduzido.png" />
+</head>
+<body class="bg-desenho">
+
+	<nav class="navbar navbar-light bg-white">
+		<!-- botão para exibir o menu#001 -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenuContent" aria-controls="navbarMenuContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		</div>
+
+		<a class="navbar-brand mx-auto col-12 col-lg" href="#">
+			<!-- Logo do hortifood -->
+			<!-- TODO inserir quando receber a imagem do Gabriel -->
+			<img src="img/icon_logo.png" class="img-fluid mx-auto d-block" alt="Responsive image">
+		</a>
+
+	</nav>
+
+	<!-- menu#001 à ser expandido -->
+	<div class="navbar-collapse bg-white mt-4 p-4 ml-4 br-4 collapse" style="width: 310px; contain:content;" id="navbarMenuContent">
+		<ul class="navbar-nav mx-5 my-5">
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Produtos</a>
+			</li>
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Pedidos</a>
+			</li>
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Clientes</a>
+			</li>
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Financeiro</a>
+			</li>
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Histórico de Vendas</a>
+			</li>
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Meus Dados</a>
+			</li>
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Reclamações</a>
+			</li>
+			<li class="nav-item">
+				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
+				<a class="nav-link" href="#">Feedback</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- conteúdo -->
+	<div class="jumbotron col-11 mx-auto mt-4 bg-light">
+		<div class="custom-control-inline">
+			<i class="fas fa-user-edit" style="line-height: 3;"></i>
+			<h1>Registro do Negócio</h1>
+		</div>
+		<form class="border-light">
+			<div class="form-group">
+				<label for="razaoSocial">Razão Social</label>
+				<input type="text" class="form-control" name="razaoSocial" id="razaoSocial" aria-describedby="smallThingie1" placeholder="empresa_super Ltda.">
+				<small id="smallThingie1">O nome da sua empresa</small>
+			</div>
+			<div class="form-group">
+				<label for="nomeFantasia">Nome Fantasia</label>
+				<input type="text" class="form-control" name="nomeFantasia" id="nomeFantasia" placeholder="Uma Super Empresa!">
+			</div>
+			<div class="form-group">
+				<label for="proprietarios">Proprietário(s)/Sócios</label>
+				<input type="text" class="form-control" name="proprietarios" id="proprietarios" placeholder="Roberto, Maria, Felipe, etc.">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" class="form-control" name="email" id="email" placeholder="nome@exemplo.com.br">
+			</div>
+			<div class="form-group">
+				<label for="tel">Telefone</label>
+				<input type="text" class="form-control" name="tel" id="tel" placeholder="(11) 9999-9999">
+			</div>
+			<div class="form-group">
+				<label for="cpf-cnpj">CPF/CNPJ</label>
+				<input type="text" class="form-control" name="cpf-cnpj" id="cpf-cnpj" placeholder="CPF: 12.345.678.9-01 ou CNPJ: 99.999.999/9999-99">
+			</div>
+			<div class="form-group">
+				<label for="CEP">CEP</label>
+				<input type="text" class="form-control" name="CEP" id="CEP" placeholder="12345-678">
+			</div>
+		</form>
+	</div>
+	<!-- div de teste para o React -->
+	<!-- <div id="root"></div> -->
+	<script src="js/index.js"></script>
+	<script src="js/jquery_3.5.1.min.js"></script>
+	<script src="bootstrap_4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/805768dde4.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

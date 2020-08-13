@@ -74,158 +74,215 @@
 			<i class="fas fa-user-edit" style="line-height: 3;"></i>
 			<h1>Registro do Negócio</h1>
 		</div>
-		<form class="border-light border-solid">
-			<div class="form-row">
+		<form class="border-light border-solid row">
+			<div class="col-md-6 form-row">
 				<label for="razaoSocial">Razão Social</label>
 				<input type="text" class="form-control" name="razaoSocial" id="razaoSocial" aria-describedby="smallThingie1" placeholder="empresa_super Ltda.">
-				<small id="smallThingie1">O nome da sua empresa</small>
+				<small class="text-muted" id="smallThingie1">O nome da sua empresa</small>
 			</div>
-			<div class="form-row">
+			<div class="col-12 col-md-6 mb-3 form-row">
 				<label for="nomeFantasia">Nome Fantasia</label>
 				<input type="text" class="form-control" name="nomeFantasia" id="nomeFantasia" placeholder="Uma Super Empresa!">
 			</div>
-			<div class="form-row">
+			<div class="col-12 mt-4 form-row">
 				<label for="proprietarios">Proprietário(s)/Sócios</label>
 				<input type="text" class="form-control" name="proprietarios" id="proprietarios" placeholder="Roberto, Maria, Felipe, etc.">
 			</div>
-			<div class="form-row">
+			<div class="col-12 col-md-6 mt-4 form-row">
 				<label for="email">Email</label>
 				<input type="email" class="form-control" name="email" id="email" placeholder="nome@exemplo.com.br">
 			</div>
-			<div class="form-row">
+			<div class="col-12 col-md-6 mt-4 form-row">
 				<label for="tel">Telefone</label>
 				<input type="text" class="form-control" name="tel" id="tel" placeholder="(11) 9999-9999">
 			</div>
-			<div class="form-row">
+			<div class="col-12 col-md-6 mt-4 form-row">
 				<label for="cpf-cnpj">CPF/CNPJ</label>
 				<input type="text" class="form-control" name="cpf-cnpj" id="cpf-cnpj" placeholder="CPF: 12.345.678.9-01 ou CNPJ: 99.999.999/9999-99">
 			</div>
-			<div class="form-row">
+			<div class="col-12 col-md-6 mt-4 form-row">
 				<label for="CEP">CEP</label>
-				<input type="text" class="form-control" name="CEP" id="CEP" placeholder="12345-678">
+				<input type="text" class="form-control" name="cep" id="CEP" placeholder="12345-678">
 			</div>
 			
 			<!-- MÉTODOS DE PEGAMENTO -->
-			<h4>Métodos de pagamento</h4>
+			<h4 class="mt-4 col-12">Métodos de pagamento</h4>
 			<!-- subtitulo -->
-			<p class="text-muted">Marque o que sua empresa pode receber</p>
+			<p class="col-12 text-muted">Marque o que sua empresa pode receber</p>
 			
-			<!-- EM DINHEIRO -->
-			<div class="custom-control custom-checkbox">
-				<input type="checkbox" name="dinheiro" class="custom-control-input" id="dinheiro">
-				<label class="custom-control-label" for="dinheiro">Dinheiro</label>
-			</div>
-			
-			<!-- EM CRÉDITO -->
-			<div class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input" id="creditoTipos">
-				<label class="custom-control-label" for="creditoTipos">Crédito</label>
-			</div>
-			<!-- tipos de crédito -->
-			<div class="ml-3 ">
-				<!-- crédito: Visa -->
+			<div class="col-12 col-md-6">
+				<!-- EM DINHEIRO -->
 				<div class="custom-control custom-checkbox">
-					<input class="creditoTipos custom-control-input" type="checkbox" name="#" id="creditoVisa" disabled>
-					<label class="custom-control-label" for="creditoVisa">Visa</label>
+					<input type="checkbox" name="dinheiro" class="custom-control-input" id="dinheiro">
+					<label class="custom-control-label" for="dinheiro">Dinheiro</label>
 				</div>
-				<!-- crédito: MasterCard -->
+				
+				<!-- EM CRÉDITO -->
 				<div class="custom-control custom-checkbox">
-					<input class="creditoTipos custom-control-input" type="checkbox" name="#" id="creditoMastercard" disabled>
-					<label class="custom-control-label" for="creditoMastercard">MasterCard</label>
+					<input type="checkbox" class="custom-control-input" id="creditoTipos">
+					<label class="custom-control-label" name="credito" for="creditoTipos">Crédito</label>
 				</div>
-				<!-- crédito: Elo -->
+				<!-- tipos de crédito -->
+				<div class="ml-3 ">
+					<!-- crédito: Visa -->
+					<div class="custom-control custom-checkbox">
+						<input class="creditoTipos custom-control-input" type="checkbox" name="creditoVisa" id="creditoVisa" disabled>
+						<label class="custom-control-label" for="creditoVisa">Visa</label>
+					</div>
+					<!-- crédito: MasterCard -->
+					<div class="custom-control custom-checkbox">
+						<input class="creditoTipos custom-control-input" type="checkbox" name="creditoMastercard" id="creditoMastercard" disabled>
+						<label class="custom-control-label" for="creditoMastercard">MasterCard</label>
+					</div>
+					<!-- crédito: Elo -->
+					<div class="custom-control custom-checkbox">
+						<input class="creditoTipos custom-control-input" type="checkbox" name="creditoElo" id="creditoElo" disabled>
+						<label class="custom-control-label" for="creditoElo">Elo</label>
+					</div>
+					<!-- crédito: American Express -->
+					<div class="custom-control custom-checkbox">
+						<input class="creditoTipos custom-control-input" type="checkbox" name="creditoAmericanexpress" id="creditoAmericanexpress" disabled>
+						<label class="custom-control-label" for="creditoAmericanexpress">American Express</label>
+					</div>
+					<!-- crédito: Hipercard -->
+					<div class="custom-control custom-checkbox">
+						<input class="creditoTipos custom-control-input" type="checkbox" name="creditoHipercard" id="creditoHipercard" disabled>
+						<label class="custom-control-label" for="creditoHipercard">Hipercard</label>
+					</div>
+					<!-- crédito: Outro -->
+					<div class="form-group row">
+						<label class="col-2 col-md-1 col-form-label" for="creditoOutro">Outro</label>
+						<div class="col-10 col-md-4">
+							<input class="creditoTipos form-control" type="text" name="creditoOutro" id="creditoOutro" disabled>
+						</div>
+					</div>
+				</div>
+
+				<!-- EM DEBITO -->
 				<div class="custom-control custom-checkbox">
-					<input class="creditoTipos custom-control-input" type="checkbox" name="#" id="creditoElo" disabled>
-					<label class="custom-control-label" for="creditoElo">Elo</label>
+					<input type="checkbox" class="custom-control-input" name="debito" id="debitoTipos">
+					<label class="custom-control-label" for="debitoTipos">Debito</label>
 				</div>
-				<!-- crédito: American Express -->
-				<div class="custom-control custom-checkbox">
-					<input class="creditoTipos custom-control-input" type="checkbox" name="#" id="creditoAmericanexpress" disabled>
-					<label class="custom-control-label" for="creditoAmericanexpress">American Express</label>
-				</div>
-				<!-- crédito: Hipercard -->
-				<div class="custom-control custom-checkbox">
-					<input class="creditoTipos custom-control-input" type="checkbox" name="#" id="creditoHipercard" disabled>
-					<label class="custom-control-label" for="creditoHipercard">Hipercard</label>
-				</div>
-				<!-- crédito: Outro -->
-				<div class="form-group row">
-					<label class="col-2 col-md-1 col-form-label" for="creditoOutro">Outro</label>
-					<div class="col-10 col-md-4">
-						<input class="creditoTipos form-control" type="text" name="#" id="creditoOutro" disabled>
+
+				<!-- tipos de debito -->
+				<div class="ml-3">
+					<!-- debito: Visa -->
+					<div class="custom-control custom-checkbox">
+						<input class="debitoTipos custom-control-input" type="checkbox" name="debitoVisa" id="debitoVisa" disabled>
+						<label class="custom-control-label" for="debitoVisa">Visa</label>
+					</div>
+					<!-- debito: Master Card -->
+					<div class="custom-control custom-checkbox">
+						<input class="debitoTipos custom-control-input" type="checkbox" name="debitoMastercard" id="debitoMastercard" disabled>
+						<label class="custom-control-label" for="debitoMastercard">Master Card</label>
+					</div>
+					<!-- debito: Elo -->
+					<div class="custom-control custom-checkbox">
+						<input class="debitoTipos custom-control-input" type="checkbox" name="debitoElo" id="debitoElo" disabled>
+						<label class="custom-control-label" for="debitoElo">Elo</label>
+					</div>
+					<!-- debito: Outros -->
+					<div class="form-group row">
+						<label class="col-2 col-md-1 col-form-label" for="debitoOutros">Outro</label>
+						<div class="col-10 col-md-4">
+							<input class="debitoTipos form-control" type="text" name="debitoOutros" id="debitoOutros" disabled>						
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- EM DEBITO -->
-			<div class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input" id="debitoTipos">
-				<label class="custom-control-label" for="debitoTipos">Debito</label>
-			</div>
+			<div class="col-12 col-md-6">
+				
+				<!-- EM VOUCHER -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="voucherTipos" name="voucher">
+					<label class="custom-control-label" for="voucherTipos">Voucher</label>
+				</div>
 
-			<!-- tipos de debito -->
-			<div class="ml-3">
-				<!-- debito: Visa -->
-				<div class="custom-control custom-checkbox">
-					<input class="debitoTipos custom-control-input" type="checkbox" name="#" id="debitoVisa" disabled>
-					<label class="custom-control-label" for="debitoVisa">Visa</label>
-				</div>
-				<!-- debito: Master Card -->
-				<div class="custom-control custom-checkbox">
-					<input class="debitoTipos custom-control-input" type="checkbox" name="#" id="debitoMastercard" disabled>
-					<label class="custom-control-label" for="debitoMastercard">Master Card</label>
-				</div>
-				<!-- debito: Elo -->
-				<div class="custom-control custom-checkbox">
-					<input class="debitoTipos custom-control-input" type="checkbox" name="#" id="debitoElo" disabled>
-					<label class="custom-control-label" for="debitoElo">Elo</label>
-				</div>
-				<!-- debito: Outros -->
-				<div class="form-group row">
-					<label class="col-2 col-md-1 col-form-label" for="debitoOutros">Outro</label>
-					<div class="col-10 col-md-4">
-						<input class="debitoTipos form-control" type="text" name="#" id="debitoOutros" disabled>						
+				<!-- tipos de voucher -->
+				<div class="ml-3">
+					<!-- voucher: Sodexo -->
+					<div class="custom-control custom-checkbox">
+						<input class="voucherTipos custom-control-input" type="checkbox" name="voucherSodexo" id="voucherSodexo" disabled>
+						<label class="custom-control-label" for="voucherSodexo">Sodexo</label>
+					</div>
+					<div class="ml-3">
+						<!-- voucher: Sodexo ref ou ali -->
+						<div class="custom-control custom-checkbox">
+							<input class="voucherSodexo custom-control-input" type="checkbox" name="voucherSodexoRefeicao" id="voucherSodexoRefeicao" disabled>
+							<label class="custom-control-label" for="voucherSodexoRefeicao">Refeição</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input class="voucherSodexo custom-control-input" type="checkbox" name="voucherSodexoAlimentacao" id="voucherSodexoAlimentacao" disabled>
+							<label class="custom-control-label" for="voucherSodexoAlimentacao">Alimentação</label>
+						</div>
+					</div>
+					<!-- voucher: Alelo -->
+					<div class="custom-control custom-checkbox">
+						<input class="voucherTipos custom-control-input" type="checkbox" name="voucherAlelo" id="voucherAlelo" disabled>
+						<label class="custom-control-label" for="voucherAlelo">Alelo</label>
+					</div>
+					<div class="ml-3">
+						<!-- voucher: Alelo ref ou ali -->
+						<div class="custom-control custom-checkbox">
+							<input class="voucherAlelo custom-control-input" type="checkbox" name="voucherAleloRefeicao" id="voucherAleloRefeicao" disabled>
+							<label class="custom-control-label" for="voucherAleloRefeicao">Refeição</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input class="voucherAlelo custom-control-input" type="checkbox" name="voucherAleloAlimentacao" id="voucherAleloAlimentacao" disabled>
+							<label class="custom-control-label" for="voucherAleloAlimentacao">Alimentação</label>
+						</div>
+					</div>
+					<!-- voucher: VR -->
+					<div class="custom-control custom-checkbox">
+						<input class="voucherTipos custom-control-input" type="checkbox" name="voucherVR" id="voucherVR" disabled>
+						<label class="custom-control-label" for="voucherVR">VR</label>
+					</div>
+					<div class="ml-3">
+						<!-- voucher: VR ref ou ali -->
+						<div class="custom-control custom-checkbox">
+							<input class="voucherVR custom-control-input" type="checkbox" name="voucherVRRefeicao" id="voucherVRRefeicao" disabled>
+							<label class="custom-control-label" for="voucherVRRefeicao">Refeição</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input class="voucherVR custom-control-input" type="checkbox" name="voucherVRAlimentacao" id="voucherVRAlimentacao" disabled>
+							<label class="custom-control-label" for="voucherVRAlimentacao">Alimentação</label>
+						</div>
+					</div>
+					<!-- voucher: Ticket -->
+					<div class="custom-control custom-checkbox">
+						<input class="voucherTipos custom-control-input" type="checkbox" name="voucherTicket" id="voucherTicket" disabled>
+						<label class="custom-control-label" for="voucherTicket">Ticket</label>
+					</div>
+					<div class="ml-3">
+						<!-- voucher: Ticket ref ou ali -->
+						<div class="custom-control custom-checkbox">
+							<input class="voucherTicket custom-control-input" type="checkbox" name="voucherTicketRefeicao" id="voucherTicketRefeicao" disabled>
+							<label class="custom-control-label" for="voucherTicketRefeicao">Refeição</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							<input class="voucherTicket custom-control-input" type="checkbox" name="voucherTicketAlimentacao" id="voucherTicketAlimentacao" disabled>
+							<label class="custom-control-label" for="voucherTicketAlimentacao">Alimentação</label>
+						</div>
+					</div>
+					<!-- voucher: Outro -->
+					<div class="form-group row">
+						<label class="col-2 col-md-1 col-form-label" for="voucherOutro">Outro</label>
+						<div class="col-10 col-md-4">
+							<input class="voucherTipos form-control" type="text" name="voucherOutro" id="voucherOutro" disabled>
+						</div>
 					</div>
 				</div>
+
+				<!-- PAGAMENTO ONLINE -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="pagamentoOnline" name="voucher">
+					<label class="custom-control-label" for="pagamentoOnline">Pagamento Online</label>
+					<p class="text-muted">Serviço terceirizado pela <a href="#">Asaas</a></p>
+				</div>
 			</div>
 
-			<!-- EM VOUCHER -->
-			<div class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input" id="voucherTipos" name="voucher">
-				<label class="custom-control-label" for="voucherTipos">Voucher</label>
-			</div>
-
-			<!-- tipos de voucher -->
-			<div class="ml-3">
-				<!-- voucher: Sodexo -->
-				<div class="custom-control custom-checkbox">
-					<input class="voucherTipos custom-control-input" type="checkbox" name="#" id="voucherSodexo" disabled>
-					<label class="custom-control-label" for="voucherSodexo">Sodexo</label>
-				</div>
-				<!-- voucher: Alelo -->
-				<div class="custom-control custom-checkbox">
-					<input class="voucherTipos custom-control-input" type="checkbox" name="#" id="voucherAlelo" disabled>
-					<label class="custom-control-label" for="voucherAlelo">Alelo</label>
-				</div>
-				<!-- voucher: VR -->
-				<div class="custom-control custom-checkbox">
-					<input class="voucherTipos custom-control-input" type="checkbox" name="#" id="voucherVR" disabled>
-					<label class="custom-control-label" for="voucherVR">VR</label>
-				</div>
-				<!-- voucher: Ticket -->
-				<div class="custom-control custom-checkbox">
-					<input class="voucherTipos custom-control-input" type="checkbox" name="#" id="voucherTicket" disabled>
-					<label class="custom-control-label" for="voucherTicket">Ticket</label>
-				</div>
-				<!-- voucher: Outro -->
-				<div class="form-group row">
-					<label class="col-2 col-md-1 col-form-label" for="voucherOutro">Outro</label>
-					<div class="col-10 col-md-4">
-						<input class="voucherTipos form-control" type="text" name="#" id="voucherOutro" disabled>
-					</div>
-				</div>
-
-			</div>
+			<button class="btn btn-success mx-auto mt-4">Enviar</button>
 
 		</form>
 	</div>
@@ -244,6 +301,10 @@
 		  $("#creditoTipos").click(enable_cb);
 		  $("#debitoTipos").click(enable_cb);
 		  $("#voucherTipos").click(enable_cb);
+		  $("#voucherSodexo").click(enable_cb);
+		  $("#voucherAlelo").click(enable_cb);
+		  $("#voucherVR").click(enable_cb);
+		  $("#voucherTicket").click(enable_cb);
 		});
 
 		function enable_cb() {

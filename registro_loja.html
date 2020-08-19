@@ -75,10 +75,15 @@
 			<h1>Registro do Negócio</h1>
 		</div>
 		<form class="border-light border-solid row">
+			<div class="col-12 form-row custom-file">
+				<input type="file" class="custom-file-input" id="imagemPerfil" required>
+				<label class="custom-file-label" for="imagemPerfil">Choose file...</label>
+				<small class="text-muted" id="smallThingie1">Imagem em .png ou .jpg, pequeno</small>
+			</div>
 			<div class="col-md-6 form-row">
 				<label for="razaoSocial">Razão Social</label>
-				<input type="text" class="form-control" name="razaoSocial" id="razaoSocial" aria-describedby="smallThingie1" placeholder="empresa_super Ltda.">
-				<small class="text-muted" id="smallThingie1">O nome da sua empresa</small>
+				<input type="text" class="form-control" name="razaoSocial" id="razaoSocial" aria-describedby="smallThingie2" placeholder="empresa_super Ltda.">
+				<small class="text-muted" id="smallThingie2">O nome da sua empresa</small>
 			</div>
 			<div class="col-12 col-md-6 mb-3 form-row">
 				<label for="nomeFantasia">Nome Fantasia</label>
@@ -88,26 +93,759 @@
 				<label for="proprietarios">Proprietário(s)/Sócios</label>
 				<input type="text" class="form-control" name="proprietarios" id="proprietarios" placeholder="Roberto, Maria, Felipe, etc.">
 			</div>
-			<div class="col-12 col-md-6 mt-4 form-row">
+			<div class="col-12 mt-4 form-row">
 				<label for="email">Email</label>
 				<input type="email" class="form-control" name="email" id="email" placeholder="nome@exemplo.com.br">
 			</div>
-			<div class="col-12 col-md-6 mt-4 form-row">
+			<div class="col-12 col-md-4 mt-4 form-row">
 				<label for="tel">Telefone</label>
 				<input type="text" class="form-control" name="tel" id="tel" placeholder="(11) 9999-9999">
 			</div>
-			<div class="col-12 col-md-6 mt-4 form-row">
-				<label for="cpf-cnpj">CPF/CNPJ</label>
-				<input type="text" class="form-control" name="cpf-cnpj" id="cpf-cnpj" placeholder="CPF: 12.345.678.9-01 ou CNPJ: 99.999.999/9999-99">
+			<div class="col-12 col-md-4 mt-4 form-row">
+				<label for="cnpj">CNPJ</label>
+				<input type="text" class="form-control" name="cnpj" id="cnpj" placeholder="CNPJ: 99.999.999/9999-99">
 			</div>
-			<div class="col-12 col-md-6 mt-4 form-row">
+			<div class="col-12 col-md-4 mt-4 form-row">
 				<label for="CEP">CEP</label>
 				<input type="text" class="form-control" name="cep" id="CEP" placeholder="12345-678">
 			</div>
-			
+			<div class="col-12 col-md-5 mt-4 form-row">
+				<label for="rua">Rua</label>
+				<input type="text" class="form-control" name="rua" id="rua" placeholder="Rua João de Souza">
+			</div>
+			<div class="col-12 col-md-5 mt-4 form-row">
+				<label for="bairro">Bairro</label>
+				<input type="text" class="form-control" name="bairro" id="bairro" placeholder="Cidade Ademar">
+			</div>
+			<div class="col-12 col-md-2 mt-4 form-row">
+				<label for="numero">Numero</label>
+				<input type="number" class="form-control" name="numero" id="numero" placeholder="00">
+			</div>
+			<div class="col-12 col-md-6 mt-4 form-row">
+				<label for="complemento">Complemento</label>
+				<input type="text" class="form-control" name="complemento" id="complemento" placeholder="Apartamento 22 ou Apartamento 15, Bloco B">
+			</div>
+
+			<!-- HORARIOS DE FUNCIONAMENTO -->
+			<h4 class="mt-4 col-12">Horários de funcionamento</h4>
+			<!-- instrução -->
+			<p class="col-12 text-muted">Marque que dias seu comércio funciona</p>
+
+			<div class="col-12">
+				<!-- Domingo -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" name="expediente-domingo" class="custom-control-input" id="domingo">
+					<label class="custom-control-label" for="domingo">Domingo</label>
+				</div>
+				<!-- HORÁRIOS: Domingo -->
+				<div class="row">
+					<!-- HORA DE ABERTURA -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Abre:</p>
+						<select class="domingo col-2 col-md-3 col-lg-2 custom-select mr-2" name="dom-a-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="domingo col-2 col-md-3 col-lg-2 custom-select" name="dom-a-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+					<!-- HORA DE FECHAMENTO -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Fecha:</p>
+						<select class="domingo col-2 custom-select mr-2" name="dom-f-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="domingo col-2 custom-select" name="dom-f-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- segunda -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" name="expediente-segunda" class="custom-control-input" id="segunda">
+					<label class="custom-control-label" for="segunda">Segunda</label>
+				</div>
+				<!-- HORÁRIOS: Segunda -->
+				<div class="row">
+					<!-- HORA DE ABERTURA -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Abre:</p>
+						<select class="segunda col-2 col-md-3 col-lg-2 custom-select mr-2" name="seg-a-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="segunda col-2 col-md-3 col-lg-2 custom-select" name="seg-a-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+					<!-- HORA DE FECHAMENTO -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Fecha:</p>
+						<select class="segunda col-2 custom-select mr-2" name="seg-f-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="segunda col-2 custom-select" name="seg-f-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+				</div>
+					
+				<!-- terca -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" name="expediente-terca" class="custom-control-input" id="terca">
+					<label class="custom-control-label" for="terca">Terca</label>
+				</div>
+				<!-- HORÁRIOS: Terça -->
+				<div class="row">
+					<!-- HORA DE ABERTURA -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Abre:</p>
+						<select class="terca col-2 col-md-3 col-lg-2 custom-select mr-2" name="ter-a-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="terca col-2 col-md-3 col-lg-2 custom-select" name="ter-a-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+					<!-- HORA DE FECHAMENTO -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Fecha:</p>
+						<select class="terca col-2 custom-select mr-2" name="ter-f-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="terca col-2 custom-select" name="ter-f-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- quarta -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" name="expediente-quarta" class="custom-control-input" id="quarta">
+					<label class="custom-control-label" for="quarta">Quarta</label>
+				</div>
+				<!-- HORÁRIOS: Quarta -->
+				<div class="row">
+					<!-- HORA DE ABERTURA -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Abre:</p>
+						<select class="quarta col-2 col-md-3 col-lg-2 custom-select mr-2" name="qua-a-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="quarta col-2 col-md-3 col-lg-2 custom-select" name="qua-a-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+					<!-- HORA DE FECHAMENTO -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Fecha:</p>
+						<select class="quarta col-2 custom-select mr-2" name="qua-f-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="quarta col-2 custom-select" name="qua-f-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- quinta -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" name="expediente-quinta" class="custom-control-input" id="quinta">
+					<label class="custom-control-label" for="quinta">Quinta</label>
+				</div>
+				<!-- HORÁRIOS: quinta -->
+				<div class="row">
+					<!-- HORA DE ABERTURA -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Abre:</p>
+						<select class="quinta col-2 col-md-3 col-lg-2 custom-select mr-2" name="qui-a-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="quinta col-2 col-md-3 col-lg-2 custom-select" name="qui-a-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+					<!-- HORA DE FECHAMENTO -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Fecha:</p>
+						<select class="quinta col-2 custom-select mr-2" name="qui-f-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="quinta col-2 custom-select" name="qui-f-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- sexta -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" name="expediente-sexta" class="custom-control-input" id="sexta">
+					<label class="custom-control-label" for="sexta">Sexta</label>
+				</div>
+				<!-- HORÁRIOS: sexta -->
+				<div class="row">
+					<!-- HORA DE ABERTURA -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Abre:</p>
+						<select class="sexta col-2 col-md-3 col-lg-2 custom-select mr-2" name="sex-a-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="sexta col-2 col-md-3 col-lg-2 custom-select" name="sex-a-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+					<!-- HORA DE FECHAMENTO -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Fecha:</p>
+						<select class="sexta col-2 custom-select mr-2" name="sex-f-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="sexta col-2 custom-select" name="sex-f-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- sabado -->
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" name="expediente-sabado" class="custom-control-input" id="sabado">
+					<label class="custom-control-label" for="sabado">Sábado</label>
+				</div>
+				<!-- HORÁRIOS: Sabado -->
+				<div class="row">
+					<!-- HORA DE ABERTURA -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Abre:</p>
+						<select class="sabado col-2 col-md-3 col-lg-2 custom-select mr-2" name="sab-a-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="sabado col-2 col-md-3 col-lg-2 custom-select" name="sab-a-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+					<!-- HORA DE FECHAMENTO -->
+					<div class="col-12 col-md my-1 row">
+						<p class="h5 mt-2 ml-3 mr-1">Fecha:</p>
+						<select class="sabado col-2 custom-select mr-2" name="sab-f-hh" disabled>
+							<option selected="">hh</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<p class="h5 mt-2 mr-1">:</p>
+						<select class="sabado col-2 custom-select" name="sab-f-mm" disabled>
+							<option selected="">mm</option>
+							<option value="00">00</option>
+							<option value="05">05</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div>
+				</div>
+
+
+			</div>
+
+
 			<!-- MÉTODOS DE PEGAMENTO -->
 			<h4 class="mt-4 col-12">Métodos de pagamento</h4>
-			<!-- subtitulo -->
+			<!-- instrução -->
 			<p class="col-12 text-muted">Marque o que sua empresa pode receber</p>
 			
 			<div class="col-12 col-md-6">
@@ -297,23 +1035,40 @@
 	<script type="text/javascript">
 		
 		$(function() {
-		  enable_cb();
-		  $("#creditoTipos").click(enable_cb);
-		  $("#debitoTipos").click(enable_cb);
-		  $("#voucherTipos").click(enable_cb);
-		  $("#voucherSodexo").click(enable_cb);
-		  $("#voucherAlelo").click(enable_cb);
-		  $("#voucherVR").click(enable_cb);
-		  $("#voucherTicket").click(enable_cb);
+			enable_cb();
+			//dias da semana
+			$("#domingo").click(enable_cb);
+			$("#segunda").click(enable_cb);
+			$("#terca").click(enable_cb);
+			$("#quarta").click(enable_cb);
+			$("#quinta").click(enable_cb);
+			$("#sexta").click(enable_cb);
+			$("#sabado").click(enable_cb);
+
+			//tipo de pagamento
+			$("#creditoTipos").click(enable_cb);
+			$("#debitoTipos").click(enable_cb);
+			$("#voucherTipos").click(enable_cb);
+			$("#voucherSodexo").click(enable_cb);
+			$("#voucherAlelo").click(enable_cb);
+			$("#voucherVR").click(enable_cb);
+			$("#voucherTicket").click(enable_cb);
+
+			
 		});
 
 		function enable_cb() {
-		  var groupID = "input." + $(this).attr('id');
+		  var groupID = $(this).attr('id');
 		  if (this.checked) {
-		    $(groupID).removeAttr("disabled");
+		    $("input." + groupID).removeAttr("disabled");
+
+		    $("select." + groupID).removeAttr("disabled");
 		  } else {
-		    $(groupID).attr("disabled", true);
-		    $(groupID).prop("checked", false);
+		    $("input." + groupID).attr("disabled", true);
+		    $("input." + groupID).prop("checked", false);
+
+		    $("select." + groupID).attr("disabled", true);
+		    $("select." + groupID).prop("checked", );
 		  }
 		}
 	</script>

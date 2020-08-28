@@ -12,6 +12,10 @@
 	width:4em
 }
 
+.padding-none{
+	padding: 0 !important;
+}
+
 .border-solid{
 	padding: 1.5rem;
 	border-width: .2rem;

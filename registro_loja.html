@@ -24,48 +24,16 @@
 
 		<a class="navbar-brand mx-auto col-12 col-lg" href="#">
 			<!-- Logo do hortiApp -->
-			<!-- TODO inserir quando receber a imagem do Gabriel -->
 			<img src="img/icon_logo.png" class="img-fluid mx-auto d-block" alt="Responsive image">
 		</a>
 
 	</nav>
 
+	<!-- TODO -->
+	<!-- Flávio, colocar o I-frame aqui -->
 	<!-- menu#001 à ser expandido -->
 	<div class="navbar-collapse bg-white mt-4 p-4 ml-4 br-4 collapse" style="width: 310px; contain:content;" id="navbarMenuContent">
-		<ul class="navbar-nav mx-5 my-5">
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Produtos</a>
-			</li>
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Pedidos</a>
-			</li>
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Clientes</a>
-			</li>
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Financeiro</a>
-			</li>
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Histórico de Vendas</a>
-			</li>
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Meus Dados</a>
-			</li>
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Reclamações</a>
-			</li>
-			<li class="nav-item">
-				<img src="img/icon_test.png" class="img-fluid nav-icon float-left" alt="Responsive image">
-				<a class="nav-link" href="#">Feedback</a>
-			</li>
-		</ul>
+		<!-- o menu é carregado dentro dessa div -->
 	</div>
 
 	<!-- conteúdo -->
@@ -75,14 +43,15 @@
 			<h1>Registro do Negócio</h1>
 		</div>
 		<form class="border-light border-solid row">
+			<!-- imagem de perfil no site -->
 			<div class="col-12 mb-5 form">
-				<div class="col-12 col-md-6 col-lg-3 mb-3 d-block mx-auto 	">
-					<img src="img/perfil_empresa.jpg" class="img-fluid img-thumbnail">
+				<div class="col-12 col-md-6 col-lg-3 mb-3 d-block mx-auto br-3	padding-none" style="border: .5rem solid #35b729; overflow: hidden;">
+					<img id="image_upload_preview" src="img/perfil_empresa.jpg" class="img-fluid">
 				</div>
 				<div class="custom-file col-12 col-md-6 d-block mx-auto">
-					<input type="file" class="custom-file-input" id="imagemPerfil" required>
-					<label class="custom-file-label" for="imagemPerfil">Envie um arquivo...</label>
-					<small class="text-muted" id="smallThingie1">Imagem em .png ou .jpg, pequeno</small>
+					<input type="file" class="custom-file-input" id="inputFile" required>
+					<label class="custom-file-label" for="inputImagemPerfil">Envie um arquivo...</label>
+					<small class="text-muted" id="smallThingie1">Imagem em png, jpg ou SVG. Pequeno e quadrado</small>
 				</div>
 			</div>
 			<div class="col-md-6 form-row">
@@ -843,8 +812,6 @@
 						</select>
 					</div>
 				</div>
-
-
 			</div>
 
 
@@ -1037,46 +1004,7 @@
 	<script src="https://kit.fontawesome.com/805768dde4.js" crossorigin="anonymous"></script>
 
 	<!-- código para os checkboxes ficarem ativos e inativos -->
-	<script type="text/javascript">
-		
-		$(function() {
-			enable_cb();
-			//dias da semana
-			$("#domingo").click(enable_cb);
-			$("#segunda").click(enable_cb);
-			$("#terca").click(enable_cb);
-			$("#quarta").click(enable_cb);
-			$("#quinta").click(enable_cb);
-			$("#sexta").click(enable_cb);
-			$("#sabado").click(enable_cb);
-
-			//tipo de pagamento
-			$("#creditoTipos").click(enable_cb);
-			$("#debitoTipos").click(enable_cb);
-			$("#voucherTipos").click(enable_cb);
-			$("#voucherSodexo").click(enable_cb);
-			$("#voucherAlelo").click(enable_cb);
-			$("#voucherVR").click(enable_cb);
-			$("#voucherTicket").click(enable_cb);
-
-			
-		});
-
-		function enable_cb() {
-		  var groupID = $(this).attr('id');
-		  if (this.checked) {
-		    $("input." + groupID).removeAttr("disabled");
-
-		    $("select." + groupID).removeAttr("disabled");
-		  } else {
-		    $("input." + groupID).attr("disabled", true);
-		    $("input." + groupID).prop("checked", false);
-
-		    $("select." + groupID).attr("disabled", true);
-		    $("select." + groupID).prop("checked", );
-		  }
-		}
-	</script>
+	<script src="js/form_controles.js"></script>
 
 
 </body>
